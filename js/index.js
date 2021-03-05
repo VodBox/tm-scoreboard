@@ -138,7 +138,6 @@
 		});
 
 		input.addEventListener("mouseup", function(evt) {
-			evt.preventDefault();
 			evt.stopPropagation();
 			evt.stopImmediatePropagation();
 		});
