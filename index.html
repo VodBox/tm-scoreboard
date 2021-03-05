@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<title>Taskmaster Scoreboard - VodBox</title>
+
+		<meta name="description" content="Create your own Taskmaster Scoreboard with your friends and family!">
+		<meta name="short_description" content="Taskmaster Scoreboard">
+		<meta name="author_description" content="VodBox (Dillon Pentz)">
+		<meta name="keywords" content="taskmaster, generator, scoreboard, hometasking, home taskmaster, alex horne, greg davies">
+
+		<meta name="twitter:card" property="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" property="twitter:title" content="Taskmaster Scoreboard">
+		<meta name="twitter:description" property="twitter:description" content="Create your own Taskmaster Scoreboard with your friends and family!">
+		<meta name="twitter:image" property="twitter:image" content="https://vodbox.github.io/tm-scoreboard/images/background.jpg">
+		<meta name="twitter:site" property="twitter:site" content="VodBox_IO">
+
+		<meta name="og:site_name" content="VodBox">
+		<meta name="og:title" content="Taskmaster Scoreboard">
+		<meta name="og:description" content="Create your own Taskmaster Scoreboard with your friends and family!">
+		<meta name="og:type" content="website">
+		<meta name="og:image" content="https://vodbox.github.io/tm-scoreboard/images/background.jpg">
+		<meta name="og:url" content="https://vodbox.github.io/tm-scoreboard/">
+		<meta name="og:locale" content="en_NZ">
+
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<link rel="canonical" href="https://vodbox.github.io/tm-scoreboard/">
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/veteran_typewriter-webfont.woff2">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<link href="fonts/veteran_typewriter.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+		<main>
+
+		</main>
+
+		<button id="play-button">Play</button>
+		
+		<div class="cover"></div>
+		<noscript>
+			<h1>Hi, this page requires JavaScript to function.</h1>
+		</noscript>
+
+		<input type="file" id="file-input" accept="image/*"></input>
+		
+		<script src="js/index.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			(function() {
+				var ref = false;
+				var cover = document.querySelector(".cover");
+				document.addEventListener("keyup", function(evt) {
+					if (evt.code === "Space") {
+						ref = !ref;
+	
+						if (ref) {
+							cover.style.display = "block";
+							cover.style.backgroundImage = 'url("/images/ref.jpg")';
+						} else {
+							cover.style.display = "none";
+							cover.style.backgroundImage = "";
+						}
+					}
+				});
+			})();
+		</script>
+	</body>
+</html>
