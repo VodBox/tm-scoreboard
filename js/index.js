@@ -15,7 +15,7 @@
 	function addContestant(image) {
 		var contestant = {};
 
-		contestant.image = !!image ? image : "/images/blank.jpg";
+		contestant.image = !!image ? image : "./images/blank.jpg";
 		contestant.score = 0;
 		contestant.oldScore = 0;
 
@@ -48,7 +48,7 @@
 		shadow.classList.add("shadow");
 
 		var frame = document.createElement("img");
-		frame.src = "/images/frame.png";
+		frame.src = "./images/frame.png";
 		frame.classList.add("frame");
 		frame.removeAttribute("width");
 		frame.removeAttribute("height");
@@ -89,7 +89,7 @@
 
 		var seal = document.createElement("img");
 		seal.classList.add("seal");
-		seal.src = "/images/seal.png";
+		seal.src = "./images/seal.png";
 		seal.removeAttribute("width");
 		seal.removeAttribute("height");
 

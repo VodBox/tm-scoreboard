@@ -33,9 +33,9 @@
 
 		<link rel="canonical" href="https://vodbox.github.io/tm-scoreboard/">
 		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/veteran_typewriter-webfont.woff2">
-		<link href="css/style.css" rel="stylesheet" type="text/css">
-		<link href="fonts/veteran_typewriter.css" rel="stylesheet" type="text/css">
+		<link rel="preload" as="font" type="font/woff2" crossorigin href="./fonts/veteran_typewriter-webfont.woff2">
+		<link href="./css/style.css" rel="stylesheet" type="text/css">
+		<link href="./fonts/veteran_typewriter.css" rel="stylesheet" type="text/css">
 	</head>
 
 	<body>
@@ -53,24 +53,5 @@
 		<input type="file" id="file-input" accept="image/*"></input>
 		
 		<script src="js/index.js" type="text/javascript"></script>
-		<script type="text/javascript">
-			(function() {
-				var ref = false;
-				var cover = document.querySelector(".cover");
-				document.addEventListener("keyup", function(evt) {
-					if (evt.code === "Space") {
-						ref = !ref;
-	
-						if (ref) {
-							cover.style.display = "block";
-							cover.style.backgroundImage = 'url("/images/ref.jpg")';
-						} else {
-							cover.style.display = "none";
-							cover.style.backgroundImage = "";
-						}
-					}
-				});
-			})();
-		</script>
 	</body>
 </html>
