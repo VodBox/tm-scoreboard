@@ -104,31 +104,28 @@
 		input.classList.add("score-edit");
 		input.type = "number";
 
+		var exit = function() {
+			scoreContainer.isOpen = false;
+			showPlay();
+		};
+
 		scoreContainer.isOpen = false;
 		scoreContainer.addEventListener("mouseup", function(evt) {
 			scoreContainer.isOpen = !scoreContainer.isOpen;
 
-			if(scoreContainer.isOpen) {
-				scoreContainer.appendChild(input);
-				input.value = con.score;
-				input.focus();
-				input.select();
+			var userInput = prompt("Enter the number of points to add:");
+			var pointsToAdd = parseInt(userInput, 10);
+
+			// Check if the input is a valid number
+			if (!isNaN(pointsToAdd)) {
+				// Add the points to the contestant's score
+				con.score += pointsToAdd;
+
+				exit();
 			} else {
-				scoreContainer.removeChild(input);
+				alert("Please enter a valid number.");
 			}
 		});
-
-		var exit = function() {
-			scoreContainer.isOpen = false;
-			scoreContainer.removeChild(input);
-
-			var score = !!input.value ? parseFloat(input.value) : 0;
-
-			if (con.score != score) {
-				con.score = score;
-				showPlay();
-			}
-		};
 
 		input.addEventListener("focusout", exit);
 		input.addEventListener("onkeydown", function(evt) {
